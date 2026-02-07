@@ -12,33 +12,33 @@ from datetime import datetime
 st.set_page_config(page_title="Neurowake", layout="wide", initial_sidebar_state="collapsed")
 
 # ---------- Styles ----------
-APP_CSS = f"""
+APP_CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-:root{{
+:root{
   --bg1: #061f4e; /* deep blue */
   --bg2: #123881; /* lighter blue */
   --accent1: #e12cfc; /* purple */
   --accent2: #23cdfa; /* aqua-ish */
-}}
-html, body, [class*="css"], .stApp {{
+}
+html, body, [class*="css"], .stApp {
   height: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
-}}
+}
 
 /* futuristic glass cards */
-.card {{
+.card {
   background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 8px 30px rgba(2,6,23,0.5);
   border: 1px solid rgba(255,255,255,0.05);
   backdrop-filter: blur(6px) saturate(120%);
-}}
+}
 
-.header-title {{
+.header-title {
   font-size: 42px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -48,15 +48,15 @@ html, body, [class*="css"], .stApp {{
   text-transform: lowercase;
   line-height: 1;
   text-shadow: 0 4px 28px rgba(33,12,80,0.55);
-}}
+}
 
-.header-date {{
+.header-date {
   font-size: 14px;
   color: rgba(255,255,255,0.8);
   margin-top: 6px;
-}}
+}
 
-.accent-pill {{
+.accent-pill {
   display: inline-block;
   padding: 6px 10px;
   border-radius: 999px;
@@ -64,17 +64,17 @@ html, body, [class*="css"], .stApp {{
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: white;
   box-shadow: 0 6px 18px rgba(33,12,80,0.36);
-}}
+}
 
-.metric-title {{
+.metric-title {
   color: rgba(255,255,255,0.85);
   font-weight: 600;
-}}
+}
 
-.small-muted {{
+.small-muted {
   color: rgba(255,255,255,0.7);
   font-size: 13px;
-}}
+}
 
 .button-neon {
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
@@ -85,14 +85,13 @@ html, body, [class*="css"], .stApp {{
   font-weight: 700;
 }
 
-.footer-note {{
+.footer-note {
   color: rgba(255,255,255,0.65);
   font-size: 12px;
-}}
+}
 
 /* make streamlit's default containers a bit tighter */
-.css-1d391kg .stButton>button {{ height: 44px; }}
-
+.css-1d391kg .stButton>button { height: 44px; }
 """
 
 st.markdown(f"<style>{APP_CSS}</style>", unsafe_allow_html=True)
