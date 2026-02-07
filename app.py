@@ -9,7 +9,7 @@ import pandas as pd
 import random
 from datetime import datetime
 
-st.set_page_config(page_title="Neurowake", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="NEUROWAKE", layout="wide", initial_sidebar_state="collapsed")
 
 # ---------- Styles ----------
 APP_CSS = """
@@ -45,7 +45,7 @@ html, body, [class*="css"], .stApp {
   color: white;
   margin: 0;
   padding: 0;
-  text-transform: lowercase;
+  text-transform: uppercase;
   line-height: 1;
   text-shadow: 0 4px 28px rgba(33,12,80,0.55);
 }
@@ -122,7 +122,6 @@ with main_left:
     st.markdown("<div style='display:flex;justify-content:space-between;align-items:center'>"
                 "<div>"
                 "<div class='metric-title'>AI sleep predictions</div>"
-                "<div class='small-muted'>These values are mock/random for now.</div>"
                 "</div>"
                 "<div class='accent-pill'>beta</div>"
                 "</div>", unsafe_allow_html=True)
